@@ -16,3 +16,12 @@ D:\C19\MyDVLD\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.csproj.CoreCompile
 D:\C19\MyDVLD\DVLD_BusinessLayer\obj\Debug\DVLD_Bus.693E2707.Up2Date
 D:\C19\MyDVLD\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.dll
 D:\C19\MyDVLD\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.pdb
+E:\MyDVLD\MyDVLD\DVLD_BusinessLayer\bin\Debug\DVLD_BusinessLayer.dll
+E:\MyDVLD\MyDVLD\DVLD_BusinessLayer\bin\Debug\DVLD_BusinessLayer.pdb
+E:\MyDVLD\MyDVLD\DVLD_BusinessLayer\bin\Debug\DVLD_DataAccessLayer.dll
+E:\MyDVLD\MyDVLD\DVLD_BusinessLayer\bin\Debug\DVLD_DataAccessLayer.pdb
+E:\MyDVLD\MyDVLD\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.csproj.AssemblyReference.cache
+E:\MyDVLD\MyDVLD\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.csproj.CoreCompileInputs.cache
+E:\MyDVLD\MyDVLD\DVLD_BusinessLayer\obj\Debug\DVLD_Bus.693E2707.Up2Date
+E:\MyDVLD\MyDVLD\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.dll
+E:\MyDVLD\MyDVLD\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.pdb

@@ -125,21 +125,32 @@ namespace DVLD_DataAccessLayer
         public static DataTable GetAllData()
         {
             DataTable dataTable1 = new DataTable();
+
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
-                string query = @"
-                SELECT PersonID as 'Person ID',NationalNo as 'National Number', FirstName as 'First Name', SecondName as 'Second Name',
-                ThirdName as 'Third Name', LastName as 'Last Name',
-                CASE WHEN Gendor = 0 THEN 'Male'
-                     WHEN Gendor = 1 THEN 'Female'
-                     ELSE CAST(Gendor AS VARCHAR)
-                END AS Gendor,
-                DateOfBirth as 'Date OF Birth', Countries.CountryName AS Nationality,
-                Phone, Email
-                FROM People
-                INNER JOIN Countries ON Countries.CountryID = People.NationalityCountryID";
+                string query = @"SELECT 
+                                 PersonID AS 'Person ID', 
+                                 NationalNo AS 'National No', 
+                                 FirstName AS 'First Name',
+                                 SecondName AS 'Second Name', 
+                                 ThirdName AS 'Third Name', 
+                                 LastName AS 'Last Name',
+                                 CASE 
+                                     WHEN Gendor = 0 THEN 'Male'
+                                     WHEN Gendor = 1 THEN 'Female'
+                                 END AS 'Gender',
+                                 DateOfBirth AS 'Date Of Birth',
+                                 (SELECT CountryName 
+                                  FROM Countries 
+                                  WHERE People.NationalityCountryID = Countries.CountryID) AS Nationality,
+                                 Phone, 
+                                 Email
+                             FROM 
+                                 People;
+                             ";
 
                 SqlCommand command = new SqlCommand(query, connection);
+
                 try
                 {
                     connection.Open();
@@ -157,9 +168,9 @@ namespace DVLD_DataAccessLayer
                     Console.WriteLine("Error retrieving data: " + ex.Message);
                 }
             }
+
             return dataTable1;
         }
-
         public static int AddNewPerson(string NationalNo, string FirstName, string SecondName, string ThirdName,
               string LastName, DateTime DateOfBirth, byte Gender, string Address, string Phone, string Email,
               int NationalityCountryID, string ImagePath)

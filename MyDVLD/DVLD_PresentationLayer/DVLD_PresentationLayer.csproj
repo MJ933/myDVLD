@@ -47,6 +47,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationForms\EditApplicationTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\EditApplicationTypeForm.Designer.cs">
+      <DependentUpon>EditApplicationTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\EditTestType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\EditTestType.Designer.cs">
+      <DependentUpon>EditTestType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\LocalDrivingLicenseApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\LocalDrivingLicenseApplications.Designer.cs">
+      <DependentUpon>LocalDrivingLicenseApplications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\ManageApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\ManageApplication.Designer.cs">
+      <DependentUpon>ManageApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\ManageTestTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\ManageTestTypes.Designer.cs">
+      <DependentUpon>ManageTestTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\NewLocalDrivingLicenseApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\NewLocalDrivingLicenseApplication.Designer.cs">
+      <DependentUpon>NewLocalDrivingLicenseApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\ucNewLocalDrivingLicenseApplicationCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\ucNewLocalDrivingLicenseApplicationCtrl.Designer.cs">
+      <DependentUpon>ucNewLocalDrivingLicenseApplicationCtrl.cs</DependentUpon>
+    </Compile>
     <Compile Include="clsGlobalSettings.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -164,6 +206,27 @@
     <Compile Include="UserForms\UpdateUserInfo.Designer.cs">
       <DependentUpon>UpdateUserInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ApplicationForms\EditApplicationTypeForm.resx">
+      <DependentUpon>EditApplicationTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\EditTestType.resx">
+      <DependentUpon>EditTestType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\LocalDrivingLicenseApplications.resx">
+      <DependentUpon>LocalDrivingLicenseApplications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\ManageApplication.resx">
+      <DependentUpon>ManageApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\ManageTestTypes.resx">
+      <DependentUpon>ManageTestTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\NewLocalDrivingLicenseApplication.resx">
+      <DependentUpon>NewLocalDrivingLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\ucNewLocalDrivingLicenseApplicationCtrl.resx">
+      <DependentUpon>ucNewLocalDrivingLicenseApplicationCtrl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

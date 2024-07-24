@@ -34,7 +34,6 @@ namespace DVLD_BusinessLayer
             this.UserName = userName;
             this.Password = password;
             this.IsActive = isActive;
-            this._person = clsPeopleBL.FindPersonByID(personID);
             this.Mode = enMode.Update;
         }
 
@@ -107,16 +106,7 @@ namespace DVLD_BusinessLayer
 
         private bool _UpdateUser()
         {
-            clsUsersDAL usersDAL = new clsUsersDAL();
-            bool personUpdated = usersDAL.UpdatePerson(this.PersonID, this._person.NationalNo, this._person.FirstName, this._person.SecondName,
-                this._person.ThirdName, this._person.LastName, this._person.DateOfBirth, this._person.Gender, this._person.Address, this._person.Phone,
-                this._person.Email, this._person.NationalityCountryID, this._person.ImagePath);
-
-            if (personUpdated)
-            {
-                return clsUsersDAL.UpdateUser(this.UserID, this.PersonID, this.UserName, this.Password, this.IsActive);
-            }
-            return false;
+            return clsUsersDAL.UpdateUser(this.UserID, this.PersonID, this.UserName, this.Password, this.IsActive);
         }
 
         public bool Save()
@@ -139,7 +129,6 @@ namespace DVLD_BusinessLayer
                     return false;
             }
         }
-
 
         public static DataTable GetAllData()
         {

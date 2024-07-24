@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD_PresentationLayer.ApplicationForms;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -12,7 +13,7 @@ namespace DVLD_PresentationLayer
             Form loginForm = new LoginForm();
             loginForm.FormClosed += LoginForm_FormClosed;
             loginForm.ShowDialog();
-            menuStrip1.ImageScalingSize = new Size(32, 32);
+            //menuStrip1.ImageScalingSize = new Size(32, 32);
             this.FormClosed += Form1_FormClose;
         }
 
@@ -72,6 +73,34 @@ namespace DVLD_PresentationLayer
         {
             ChangeUserPassword.ID = clsGlobalSettings.User.PersonID;
             Form frm = new ChangeUserPassword();
+            frm.ShowDialog();
+        }
+
+        private void manageTestTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new ManageTestTypes();
+            frm.ShowDialog();
+        }
+
+        private void ManageApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new NewLocalDrivingLicenseApplication();
+            frm.ShowDialog();
+        }
+
+        private void manageApplicationsTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new ManageApplication();
+            frm.ShowDialog();
+        }
+
+        private void localDrivingLicenseApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new LocalDrivingLicenseApplications();
             frm.ShowDialog();
         }
     }

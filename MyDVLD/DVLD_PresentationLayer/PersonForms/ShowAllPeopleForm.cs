@@ -57,10 +57,8 @@ namespace DVLD_PresentationLayer
                         }
                         else if (column.DataType == typeof(int))
                         {
-
                             int.TryParse(filterText, out int value);
                             dataView.RowFilter = $"[{selectedColumn}]={value}";
-
                         }
                         else if (column.DataType == typeof(DateTime))
                         {
